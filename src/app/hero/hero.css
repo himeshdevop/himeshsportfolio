@@ -1,0 +1,130 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  color: white;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Header ===== */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px 50px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #b6f7ae;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+/* ===== Nav ===== */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+.nav div:hover {
+  color: #b6f7ae;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* ===== Write Me ===== */
+.contact {
+  display: flex;
+  align-items: flex-end;
+}
+
+.write-me {
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.write-me .arrow {
+  font-weight: 900;
+  margin-left: 6px;
+  text-decoration: underline;
+  font-size: 1.3rem;
+}
+
+.write-me:hover {
+  color: #b6f7ae;
+}
+
+/* ===== Globe (centered, now interactive) ===== */
+.canvas-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65vmin;
+  height: 65vmin;
+  z-index: 0;
+  background: transparent !important;
+  filter: none !important;
+  pointer-events: auto; /* enables mouse rotation */
+  cursor: grab;
+}
+
+/* ===== Footer (PORTFOLIO text) ===== */
+.footer-title {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: clamp(6rem, 19vw, 22rem); /* spans full width */
+  font-weight: 900;
+  color: #b6f7ae;
+  line-height: 0.8;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px rgba(182, 247, 174, 0.8),
+               0 0 60px rgba(182, 247, 174, 0.3);
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-title {
+    font-size: 22vw;
+  }
+}
